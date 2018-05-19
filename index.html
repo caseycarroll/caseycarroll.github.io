@@ -1,100 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#92dfb3">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <title>About Casey Carroll</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blogs | Casey Carroll</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
-        :root {
-            --primary-color: #ccf9d6;
-            --analagous-color: #92dfb3;
-            --analagous-blue-color: #4594d1;
-        }
         html {
-            background-color: var(--primary-color);
-            font-family: 'Nunito', sans-serif;
+            font-size: 100%;
+            background: #eee;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
         }
         body {
-            margin: 0;
+            margin: 0 auto;
+            max-width: 45rem;
+            height: 100%;
             display: grid;
-            height: 100vh;
-            grid-template-rows: auto 1fr 81px;
-            grid-template-areas: "header"
-                                "main"
-                                "footer"
+            grid-template-rows: 250px 1fr 5rem;
+        }
+        main {
+            max-width: 60rem;
+        }
+        p {
+            line-height: 1.5;
+            color: #222;
         }
         header {
-            grid-area: header;
-            padding: 24px;
+            display: flex;
+            align-items: center;
+            margin: 2rem 0;
         }
         h1 {
             opacity: 0.8;
-            margin-bottom: 8px;
-            margin-top: 32px;
+            font-weight: 600;
         }
-        header p {
-            margin-top: 0;
-        }
-        p {
-            font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-        p a {
-            text-decoration: none;
-            color: var(--analagous-blue-color);
-            text-shadow: 0.05em 0 0 var(--primary-color), -0.05em 0 0 var(--primary-color),
-                0 0.05em 0 var(--primary-color), 0 -0.05em 0 var(--primary-color),
-                0.1em 0 0 var(--primary-color), -0.1em 0 0 var(--primary-color),
-                0 0.1em 0 var(--primary-color), 0 -0.1em 0 var(--primary-color);
-            background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
-            background-repeat: repeat-x;
-            background-position: bottom 0.05em center;
-            background-size: 100% 0.05em;
-        }
-        main {
-            grid-area: main;
-            background-color: var(--analagous-color);
-            padding: 32px;
-            box-shadow: inset 0px 4px 6px 2px rgba(0, 0, 0, 0.2);
-        }
-        main p {
-            max-width: 60rem;
-        }
-        footer {
-            grid-area: footer;
-            background-color: var(--analagous-blue-color);
-            display: flex;
-            justify-content: flex-end;
-            align-content: center;
-            padding: 16px 32px;
-            box-shadow: inset -1px 2px 4px 0px rgba(0, 0, 0, 0.2)
-        }
-        .footer-icon {
-            opacity: 0.8;
-            padding-left: 16px;
-        }
-        #github-svg, #twitter-svg {
-            transition: fill 750ms ease;
-        }
-        #github-link:hover #github-svg { 
-            fill: #9430a8;
-        }
-        #twitter-link:hover #twitter-svg { 
-            fill: #ccf9ec;
-        }
-        .avatar-container {
-            margin-top: 18px;
+        header h1, p {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
         }
         #avatar {
             height: 96px;
@@ -103,58 +47,40 @@
             background-image: url("small_avatar.png");
             border-radius: 50%;
             box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.24);
+            margin-right: 2rem;
         }
-        @media only screen and (min-width: 1080px) {
-            body {
-                grid-template-rows: auto 81px;
-                grid-template-columns: 1fr 1fr 30%;
-                grid-template-areas: "header header main"
-                                    "header header footer"
-            }
-            h1 {
-                font-size: 4em;
-                width: 100%;
-            }
-            header {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            header p {
-                font-size: 2em;
-            }
-            .header-text-container {
-                padding: 0px 64px;
-            }
-            main {
-                box-shadow: inset 4px 0px 6px 2px rgba(0, 0, 0, 0.2)
-            }
-            #avatar {
-                height: 128px;
-                width: 128px;
-                margin-left: 64px;
-            }
+        footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
         }
+        .footer-icon {
+            opacity: 0.8;
+            padding-left: 1rem;
+        }
+        #github-svg, #twitter-svg {
+            transition: fill 750ms ease;
+        }
+        #github-link:hover #github-svg { 
+            fill: #9430a8;
+        }
+        #twitter-link:hover #twitter-svg { 
+            fill: #00aced;
+        }        
     </style>
 </head>
 <body>
-    <header>
+    <header id="page-header">
         <div class="avatar-container">
-            <div id="avatar"></div>
+                <div id="avatar"></div>
         </div>
-        <div class="header-text-container">
+        <div class="text-container">
             <h1>Casey Carroll</h1>
-            <p>A frontend web developer in <a href="https://goo.gl/maps/9QhNAEhtFp22">Denton, TX</a></p>
+            <p>Web developer, hobby cyclist and dumbass nerd</p>
         </div>
     </header>
     <main>
-        <h2>About me</h2>
-        <h3>Professionally</h3>
-        <p>I'm currently working at a company that builds sites with React and Redux. I've recently adopted a role as a web performance advocate. My goal is to educate the organization on the importance of Inclusive Design and how it intersects with web performance. Progressive Web Apps provide a model that represents this correlation.</p>
-        <p> So far, I've given presentations on PWAs, written documentation on optimizing assets with Webpack and introduced ways to add accessibility and performance auditing to our testing pipeline.</p>
-        <p>I graduated from UNT with a degree in Information Techonology in 2017.</p>
-        <h3>Personally</h3>
-        <p>I love coffee, music, biking and not being in Texas.</p>
+        <p><i>Future spot for blog posts</i></p>
     </main>
     <footer>
         <a class="footer-icon" title="Twitter Profile" href="https://twitter.com/caseyrcarroll" id="twitter-link">
