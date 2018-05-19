@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <title>Casey Carroll</title>
+    <title>About Casey Carroll</title>
     <style>
         :root {
             --primary-color: #ccf9d6;
@@ -47,12 +47,29 @@
         }
         p {
             font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        p a {
+            text-decoration: none;
+            color: var(--analagous-blue-color);
+            text-shadow: 0.05em 0 0 var(--primary-color), -0.05em 0 0 var(--primary-color),
+                0 0.05em 0 var(--primary-color), 0 -0.05em 0 var(--primary-color),
+                0.1em 0 0 var(--primary-color), -0.1em 0 0 var(--primary-color),
+                0 0.1em 0 var(--primary-color), 0 -0.1em 0 var(--primary-color);
+            background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+            background-repeat: repeat-x;
+            background-position: bottom 0.05em center;
+            background-size: 100% 0.05em;
         }
         main {
             grid-area: main;
             background-color: var(--analagous-color);
             padding: 32px;
             box-shadow: inset 0px 4px 6px 2px rgba(0, 0, 0, 0.2);
+        }
+        main p {
+            max-width: 60rem;
         }
         footer {
             grid-area: footer;
@@ -87,7 +104,7 @@
             border-radius: 50%;
             box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.24);
         }
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 1080px) {
             body {
                 grid-template-rows: auto 81px;
                 grid-template-columns: 1fr 1fr 30%;
@@ -127,12 +144,17 @@
         </div>
         <div class="header-text-container">
             <h1>Casey Carroll</h1>
-            <p>A frontend web developer in Denton, TX</p>
+            <p>A frontend web developer in <a href="https://goo.gl/maps/9QhNAEhtFp22">Denton, TX</a></p>
         </div>
     </header>
     <main>
-        <h2>Hey,</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <h2>About me</h2>
+        <h3>Professionally</h3>
+        <p>I'm currently working at a company that builds sites with React and Redux. I've recently adopted a role as a web performance advocate. My goal is to educate the organization on the importance of Inclusive Design and how it intersects with web performance. Progressive Web Apps provide a model that represents this correlation.</p>
+        <p> So far, I've given presentations on PWAs, written documentation on optimizing assets with Webpack and introduced ways to add accessibility and performance auditing to our testing pipeline.</p>
+        <p>I graduated from UNT with a degree in Information Techonology in 2017.</p>
+        <h3>Personally</h3>
+        <p>I love coffee, music, biking and not being in Texas.</p>
     </main>
     <footer>
         <a class="footer-icon" title="Twitter Profile" href="https://twitter.com/caseyrcarroll" id="twitter-link">
