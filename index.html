@@ -34,6 +34,7 @@
         main h2 {
             opacity: 0.75;
             margin: 2rem;
+            font-size: 1.25rem;
         }
         p {
             line-height: 1.5;
@@ -67,10 +68,11 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
+            margin: auto 1rem;
         }
         .footer-icon {
             opacity: 0.8;
-            padding-left: 1rem;
+            margin-left: 1rem;
         }
         #github-svg, #twitter-svg {
             transition: fill 750ms ease;
@@ -95,12 +97,6 @@
             border-radius: 15px;
             width: 95%;
         }
-        .blog-list-item a:link {
-            text-decoration: none;
-        }
-        .blog-list-item a:link:hover {
-            text-decoration: underline;
-        }
         .blog-title {
             margin: auto 2rem;
             color: #4594d1;
@@ -112,6 +108,7 @@
             font-weight: 400;
             font-size: 1.25rem;
             color: #222;
+            text-decoration: none;
         }
         @media only screen and (min-width: 768px) {
             header {
@@ -134,9 +131,7 @@
         <h2>Latest Blog Posts:</h2>
         <ol class="blog-list">
             <li class="blog-list-item">
-                <a href="/monad.html">
-                    <h3 class="blog-title">Monads: An Explainer <span class="blog-subtitle">What is a Monad and how can I use it in JavaScript?</span></h3>
-                </a>
+                    <h3 class="blog-title"><a href="/monad.html">Monads: An Explainer</a> <span class="blog-subtitle">What is a Monad and how can I use it in JavaScript?</span></h3>
             </li>
         </ol>
     </main>
