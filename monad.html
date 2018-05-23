@@ -110,13 +110,21 @@
             text-decoration: none;
         }
         .blog-header-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .intrinsic-image-wrapper {
+            position: relative;
             grid-row: 1 / 3;
             z-index: 1;
             grid-column: 1;
-            max-width: 100%;
-            height: auto;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
+            padding-bottom: 75%;
+            height: 0;
         }
         .blog-content {
             grid-column: 1;
@@ -150,7 +158,9 @@
         </div>
     </header>
     <main>
-            <img class="blog-header-img" src="/monad-art.png" alt="a drawing of monad yawning">
+            <div class="intrinsic-image-wrapper">
+                <img class="blog-header-img" src="/monad-art.png" alt="a drawing of monad yawning">
+            </div>
             <h2 class="blog-title">Monads: An Explainer <span class="blog-subtitle">Learn more about the Monad</span></h2>
             <div class="blog-content">
                 <p>I'm not very smart. I've used Monads to write API calls with the fetch API, but I actually don't know much about them. However, I know a lot about my cat, Monad.</p>
