@@ -40,6 +40,12 @@
             line-height: 1.5;
             color: #222;
         }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
         header {
             display: flex;
             align-items: center;
@@ -54,6 +60,9 @@
             font-weight: 400;
             font-size: 1rem;
             line-height: 1.5;
+        }
+        h1 a {
+            color: black;
         }
         #avatar {
             height: 4rem;
@@ -91,17 +100,26 @@
             justify-items: center;
         }
         .blog-list-item {
+            position: relative;
             background: #fff;
             display: flex;
             align-items: center;
             border-radius: 15px;
             width: 95%;
         }
+        .blog-list-item a::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
         .blog-title {
             margin: auto 2rem;
             color: #4594d1;
             font-size: 1.5rem;
-            font-weight: 500;
+            font-weight: 600;
         }
         .blog-subtitle {
             display: block;
@@ -109,6 +127,7 @@
             font-size: 1.25rem;
             color: #222;
             text-decoration: none;
+            margin-top: 0.45em;
         }
         @media only screen and (min-width: 768px) {
             #avatar {
@@ -124,7 +143,7 @@
                 <div id="avatar"></div>
         </div>
         <div class="text-container">
-            <h1>Casey Carroll <span>web developer, hobby cyclist and dumbass nerd</span></h1>
+            <h1><a href="/">Casey Carroll</a> <span>web developer, hobby cyclist and dumbass nerd</span></h1>
         </div>
     </header>
     <main>
