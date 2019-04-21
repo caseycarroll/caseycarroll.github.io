@@ -25,14 +25,14 @@ a {
 .main-grid {
     width: 100vw;
     display: grid;
-    grid-template-columns: minmax(24px, 1fr) minmax(min-content, 16rem) minmax(min-content, 24rem) minmax(24px, 1fr); 
+    grid-template-columns: minmax(24px, 1fr) minmax(min-content, 40rem) minmax(24px, 1fr); 
     grid-template-rows: 5vw min-content min-content 5rem 1fr;
     grid-template-areas: 
-        '. . . .'
-        '. title title .'
-        '. social . .'
-        '. . . .'
-        ' . main main .'
+        '. . .'
+        '. title .'
+        '. social .'
+        '. . .'
+        ' . main .'
 }
 
 .title-text {
@@ -52,9 +52,7 @@ a {
 
 .horizontal-list {
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: inline;
     margin: 0;
 }
 
@@ -73,7 +71,8 @@ a {
 .external-link::after {
     content: '↗️';
     padding-inline-start: 0.25em;
-    padding-inline-end: 0.5em;
+    padding-inline-end: 0.8em;
+    display: inline-block;
 }
 
 [role="main"] {
@@ -82,6 +81,20 @@ a {
 
 section p {
     line-height: 1.5;
+}
+
+section ul li {
+    line-height: 1.5;
+    list-style-type: none;
+}
+
+section ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--primary-text-color); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */ 
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
 .section-header {
