@@ -1,6 +1,7 @@
 :root {
     --primary-color: #7fc2c7;
     --primary-text-color: #5f898f;
+    --secondary-color: #611cd44f;
 }
 
 @font-face {
@@ -23,7 +24,7 @@ a {
 }
 
 main * + *:not(p) {
-    margin: 2rem;
+    margin: 2rem 0 2rem;
 }
 
 .main-grid {
@@ -119,11 +120,12 @@ section ul li::before {
     justify-content: center;
 }
 
-section img {
+main img {
+    align-self: center;
+    width: 90%;
     border-radius: 8px;
-    width: 80%;
     margin: 0 auto;
-    box-shadow: 12px 12px 2px 1px rgba(97, 28, 212, 0.31)
+    box-shadow: 12px 12px 2px 1px var(--secondary-color);
 }
 
 footer {
