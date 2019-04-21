@@ -26,7 +26,7 @@ a {
     width: 100vw;
     display: grid;
     grid-template-columns: minmax(24px, 1fr) minmax(min-content, 16rem) minmax(min-content, 24rem) minmax(24px, 1fr); 
-    grid-template-rows: 5vw min-content min-content 6rem 1fr;
+    grid-template-rows: 5vw min-content min-content 5rem 1fr;
     grid-template-areas: 
         '. . . .'
         '. title title .'
@@ -47,6 +47,7 @@ a {
     font-size: 1rem;
     font-style: italic;
     font-weight: 400;
+    margin-block-end: 1.5em;
 }
 
 .horizontal-list {
