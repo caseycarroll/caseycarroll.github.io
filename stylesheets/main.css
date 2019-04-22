@@ -35,6 +35,8 @@ body {
 
 a {
     color: var(--primary-text-color);
+    display: inline-block;
+    font-weight: 700;
 }
 
 a:visited {
@@ -79,6 +81,10 @@ main * + *:not(p) {
     padding: 0;
     display: inline;
     margin: 0;
+}
+
+.horizontal-list > * + * {
+    margin-inline-start: 1em;
 }
 
 [data-name="social-media"] {
