@@ -79,12 +79,11 @@ main * + *:not(p) {
 
 .horizontal-list {
     padding: 0;
-    display: inline;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
     margin: 0;
-}
-
-.horizontal-list > * + * {
-    margin-inline-start: 1em;
+    margin-inline-start: -16px;
 }
 
 [data-name="social-media"] {
@@ -94,6 +93,7 @@ main * + *:not(p) {
 .horizontal-list li {
     display: inline;
     line-height: 2;
+    margin-inline-start: 16px;
 }
 
 .external-link {
