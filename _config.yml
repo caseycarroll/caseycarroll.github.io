@@ -20,15 +20,14 @@
 
 title: Casey Carroll
 email: casey.r.carroll@icloud.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Casey Carroll's personal site. 
+description: ""
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://caseycarroll.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: casey_c_dev
 github_username:  caseycarroll
 
 # Build settings
-theme: minima
+theme: 
 plugins:
   - jekyll-feed
 
