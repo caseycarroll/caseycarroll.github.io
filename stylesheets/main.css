@@ -103,3 +103,12 @@ main img {
 .cluster > * {
     margin: calc(var(--cluster-space) / 2);
 }
+
+.disclaimer {
+    background-color: khaki;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.disclaimer p {
+    margin: 0;
+}
