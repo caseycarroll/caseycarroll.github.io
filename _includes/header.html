@@ -3,13 +3,25 @@
     <nav>
         <ul>
             <li>
-                <a href="/" class="{%if page.link == "home" %}current-page{%endif%}">Home</a>
+                <a href="/" class="{%if page.link == "home" %}current-page{%endif%}">Home
+                    {%if page.link == "home" %}
+                        <span class="visually-hidden">current page</span>
+                    {%endif%}
+                </a>
             </li>
             <li>
-                <a href="/blog.html" class="{%if page.link == "blog" %}current-page{%endif%}"">Blog</a>
+                <a href="/blog.html" class="{%if page.link == "blog" %}current-page{%endif%}"">Blog
+                    {%if page.link == "blog" %}
+                        <span class="visually-hidden">current page</span>
+                    {%endif%}
+            </a>
             </li>
             <li>
-                <a href="/photos.html" class="{%if page.link == "photos" %}current-page{%endif%}"">Photos</a>
+                <a href="/photos.html" class="{%if page.link == "photos" %}current-page{%endif%}"">Photos
+                    {%if page.link == "photos" %}
+                        <span class="visually-hidden">current page</span>
+                    {%endif%}
+                </a>
             </li>
         </ul>
     </nav>
