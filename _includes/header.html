@@ -1,7 +1,16 @@
-<header>
-    <h1>{{page.title}}</h1>
+<header class="cluster">
+    <h1>Casey Carroll</h1>
     <nav>
-        <a href="/blog.html">Blog</a>
-        <a href="/photos.html">Photos</a>
+        <ul>
+            <li>
+                <a href="/" class="{%if page.link == "home" %}current-page{%endif%}">Home</a>
+            </li>
+            <li>
+                <a href="/blog.html" class="{%if page.link == "blog" %}current-page{%endif%}"">Blog</a>
+            </li>
+            <li>
+                <a href="/photos.html" class="{%if page.link == "photos" %}current-page{%endif%}"">Photos</a>
+            </li>
+        </ul>
     </nav>
 </header>
