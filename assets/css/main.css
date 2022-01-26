@@ -4,7 +4,9 @@
     --space-sm: 0.75rem;
     --space-md: 1.5rem;
     --space-lg: 3rem;
-    --primary-color: rgb(0, 128, 128); 
+    --primary-color: rgb(0, 128, 128);
+    --primary-lighter-color: rgb(216, 215, 215);
+    --primary-lighter-color-hover: rgb(194, 192, 192);
     --secondary-color: rgb(211, 99, 247);
     --transparent-primary-color: rgb(0, 128, 128, 0.75);
     --transparent-secondary-color: rgb(211, 99, 247, 0.75);
@@ -127,7 +129,20 @@ main {
 
 .about-links > li {
     display: flex;
-    --space-sm: 0.25rem;
+    background: var(--primary-lighter-color);
+    border-radius: 5px;
+    padding: 0.5em 0.75em;
+    align-items: center;
+}
+
+.about-links > li:hover {
+    background: var(--primary-lighter-color-hover);
+    text-decoration: underline;
+}
+
+.about-links a {
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .disclaimer {
