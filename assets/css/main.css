@@ -124,3 +124,8 @@ main {
     width: 8rem;
     box-shadow: -12px -6px 32px var(--transparent-primary-color), 12px 6px 32px var(--transparent-secondary-color);
 }
+
+.about-links > li {
+    display: flex;
+    --space-sm: 0.25rem;
+}
