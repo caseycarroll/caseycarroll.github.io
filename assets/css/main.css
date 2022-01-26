@@ -102,8 +102,8 @@ main {
 
 .hero-wrapper {
     width: 100%;
-    padding-block-start: clamp(2rem, 10vw, 4rem);
-    padding-block-end: clamp(2rem, 10vw, 4rem);
+    padding-block-start: clamp(4rem, 10vw, 5rem);
+    padding-block-end: clamp(4rem, 10vw, 5rem);
     --s1: 3rem;
 }
 
