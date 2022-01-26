@@ -1,7 +1,9 @@
 :root {
     --text-color: #222;
     --text-color-light: #444;
-    --s1: 1rem;
+    --space-sm: 0.75rem;
+    --space-md: 1.5rem;
+    --space-lg: 3rem;
     color: var(--text-color);
     font-size: calc(0.33vw + 1em);
     font-family: Arial, Helvetica, sans-serif;
@@ -42,7 +44,7 @@ header h1 {
     flex-basis: 15rem;
 }
 
-nav li {
+.unstyled-inline-list li {
     list-style: none;
     display: inline-block;
 }
@@ -68,8 +70,53 @@ nav a.current-page::after {
     bottom: -6px;
 }
 
-.cluster {
+main {
+    line-height: 1.5;
+}
+
+[class*=cluster] {
     display: flex;
     flex-wrap: wrap;
-    row-gap: var(--s1);
+    row-gap: var(--space-sm);
+    column-gap: var(--space-sm);
+}
+
+.cluster--md {
+    row-gap: var(--space-md);
+    column-gap: var(--space-md);
+}
+
+.stack > * + * {
+    margin-block-start: var(--space-md);
+}
+
+.stack-large > * + * {
+    margin-block-start: var(--space-lg);
+}
+
+.hero-wrapper {
+    width: 100%;
+    padding-block-start: clamp(2rem, 10vw, 4rem);
+    padding-block-end: clamp(2rem, 10vw, 4rem);
+    --s1: 3rem;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 27rem;
+}
+
+.avatar-wrapper {
+    text-align: center;
+    margin: auto 0;
+    flex-grow: 1;
+}
+
+.avatar {
+    text-align: center;
+    border-radius: 50%;
+    width: 8rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
