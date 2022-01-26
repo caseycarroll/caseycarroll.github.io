@@ -8,8 +8,8 @@
     --primary-lighter-color: rgb(216, 215, 215);
     --primary-lighter-color-hover: rgb(194, 192, 192);
     --secondary-color: rgb(211, 99, 247);
-    --transparent-primary-color: rgb(0, 128, 128, 0.75);
-    --transparent-secondary-color: rgb(211, 99, 247, 0.75);
+    --transparent-primary-color: rgb(0, 128, 128, 0.5);
+    --transparent-secondary-color: rgb(211, 99, 247, 0.5);
     color: var(--text-color);
     font-size: calc(0.33vw + 1em);
     font-family: Arial, Helvetica, sans-serif;
