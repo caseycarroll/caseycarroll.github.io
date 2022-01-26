@@ -129,3 +129,10 @@ main {
     display: flex;
     --space-sm: 0.25rem;
 }
+
+.disclaimer {
+    background-color: khaki;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: var(--space-md);
+}
