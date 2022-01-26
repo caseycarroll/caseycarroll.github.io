@@ -127,6 +127,10 @@ main {
     box-shadow: -12px -6px 32px var(--transparent-primary-color), 12px 6px 32px var(--transparent-secondary-color);
 }
 
+.about-links {
+    font-size: 0.75em;
+}
+
 .about-links > li {
     display: flex;
     background: var(--primary-lighter-color);
