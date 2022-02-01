@@ -37,17 +37,19 @@ body {
     padding: 2.25rem 5vw;
 }
 
+h1 {
+    font-size: var(--space-md);
+}
+
 header {
     align-items: baseline;
+    font-size: 1em;
 }
 
-header h1 {
-    font-size: 1.5em;
-}
-
-header h1 {
+header .page-title {
     flex-grow: 1;
     flex-basis: 15rem;
+    font-weight: bold;
 }
 
 .unstyled-inline-list li {
@@ -69,7 +71,8 @@ nav a {
 nav a.current-page::after {
     content: '';
     position: absolute;
-    border: solid var(--secondary-color) 2px;
+    background: var(--secondary-color);
+    height: 0.2em;
     border-radius: 2px;
     left: 0;
     right: 0;
@@ -79,6 +82,8 @@ nav a.current-page::after {
 main {
     line-height: 1.5;
 }
+
+
 
 [class*=cluster] {
     display: flex;
@@ -96,8 +101,17 @@ main {
     margin-block-start: var(--space-md);
 }
 
+.stack-sm > * + * {
+    margin-block-start: var(--space-sm);
+}
+
 .stack-large > * + * {
     margin-block-start: var(--space-lg);
+}
+
+.stack-exception,
+.stack-exception + * {
+    margin-block-start: var(--space-md);
 }
 
 .hero-wrapper {
@@ -217,4 +231,17 @@ main {
 .switcher > * {
     flex-grow: 1;
     flex-basis: calc((35rem - 100%) * 999);
+}
+
+@counter-style blogs {
+    system: cyclic;
+    symbols: 🗒️;
+    suffix: " ";
+}
+
+.blog-list {
+    padding-inline-start: 2em;
+    list-style-type: blogs;
+    font-weight: bold;
+    font-size: 1.125em;
 }
