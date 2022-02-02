@@ -4,6 +4,16 @@ title: Casey's Photography
 link: photos
 ---
 
-<div class="hero-wrapper">
-    <h2>Work in progress...</h2>
+<div class="photo-grid">
+    {% assign image_files = site.static_files | where: "image", true %}
+    {% for myimage in image_files %}
+        {% if myimage.extname == ".webp" and myimage.path contains "compressed" %}
+        <div class="grid-item--{% increment image_counter %}">
+            <picture>
+                <source srcset="{{myimage.path}}">
+                <img class="grid-image" src="{{myimage.path}}"/>
+            </picture>
+        </div>
+        {% endif %}
+    {% endfor %}
 </div>
