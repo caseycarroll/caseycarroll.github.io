@@ -246,6 +246,10 @@ main {
     suffix: " ";
 }
 
+ul {
+    list-style-type: none;
+}
+
 .blog-list {
     padding-inline-start: 2em;
     list-style-type: blogs;
@@ -260,19 +264,13 @@ main {
 }
 
 .photo-grid {
-    margin: 3rem auto;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 3rem);
-    grid-gap: 3px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-sm);
 }
 
-.grid-image {
+.photo-grid img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
-}
-
-.grid-item--9 img {
-    transform: rotate(270deg);
+    vertical-align: bottom;
 }
