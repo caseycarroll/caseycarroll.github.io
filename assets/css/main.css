@@ -44,6 +44,10 @@ h1 {
     font-size: var(--space-md);
 }
 
+h2 {
+    font-size: inherit;
+}
+
 header {
     align-items: baseline;
     font-size: 1em;
@@ -252,9 +256,15 @@ ul {
 
 .blog-list {
     padding-inline-start: 2em;
-    list-style-type: blogs;
+    list-style-type: disc;
     font-weight: bold;
     font-size: 1.125em;
+}
+
+@supports (list-style-type: blogs) {
+    .blog-list {
+        list-style-type: blogs;
+    }
 }
 
 .subheader {
