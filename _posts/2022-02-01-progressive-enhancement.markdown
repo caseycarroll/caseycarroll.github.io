@@ -22,7 +22,21 @@ The other complication was that `line-clamp` only works in modern browsers. At t
 
 ```css
 .description {
-	
+	overflow: hidden;
+	position: relative;
+	max-height: calc(1em * 1.5 * 3);
+}
+
+.description::before {
+	content: '';
+	background: linear-gradient( to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 75%);
+	top: calc(1em * 3.5);
+    position: absolute;
+    bottom: 16px;
+    right: 0;
+    width: 55%;
+    display: block;
+    height: 1em;
 }
 
 @supports (line-clamp: 3) {
@@ -31,12 +45,22 @@ The other complication was that `line-clamp` only works in modern browsers. At t
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
+		position: unset;
+	}
+	.description::before {
+		display: none;
 	}
 }
 ```
 
-The result was servicable. On IE11, the text truncates and fades away on the last line. In modern browsers, the text ends with an ellipsis. The amount of browser engine prefixes is telling, however. I generally get squeamish when CSS layouts require browser prefixes. To me, it's a sign that the technique isn't fully recommended, and might get phased out. 
+The result: 
 
-This technique has accessibility implications as well. Screen readers will read all of the text in the description, even the text that's hidden. While this behavior might seem favorable, it doesn't work well for partially sighted users, or users with cognitive disabilities. What the screen reader announces to them doesn't match what's on the screen. This experience can cause confusion and frustration. 
+![IE Fallback Example](/assets/images/fallback.png)
+
+It's... serviceable. On IE11, the text truncates and fades away on the last line. In modern browsers, the text ends with an ellipsis. The amount of browser engine prefixes is telling, however. I generally get squeamish when CSS layouts require browser prefixes. To me, it's a sign that the technique isn't fully recommended, and might get phased out. This implementation is quite fragile, too. You could use variables to make it flexible with font sizes and different fonts, but regardless, a lot of tweaking is required. It doesn't respond well to padding either. 
+
+This technique has accessibility implications as well. Screen readers will read all of the text in the description, even the text that's hidden. While this behavior might seem favorable, it doesn't work well for partially sighted users, or users with cognitive disabilities. The screen reader's output doesn't match what's on the screen. This experience can cause confusion and frustration. 
 
 So, it's time to take a step back. Maybe truncrating text isn't the right solution at all. 
+
+WIP...
