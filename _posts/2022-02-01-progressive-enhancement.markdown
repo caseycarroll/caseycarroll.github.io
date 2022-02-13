@@ -18,6 +18,25 @@ Here's what it looked like:
 
 Essentially, the designers asked my team to enforce data loss --- something CSS wasn't designed to do. Sure, CSS lets you hide content. i.e. `display: none`, `overflow: hidden`, etc... But applying rules that hide content usually lead to fragile designs.  
 
+The other complication was that `line-clamp` only works in modern browsers. At the time, my organization had a requirement to support IE 11. [cainiuse.com](https://caniuse.com/css-line-clap) indicates line-clamp works in all browsers, but IE. Looks like it's time to whip up a progressive enhancement! 
 
-WIP...
+```css
+.description {
+	
+}
 
+@supports (line-clamp: 3) {
+	.description {
+		-webkit-line-clamp: 3;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+}
+```
+
+The result was servicable. On IE11, the text truncates and fades away on the last line. In modern browsers, the text ends with an ellipsis. The amount of browser engine prefixes is telling, however. I generally get squeamish when CSS layouts require browser prefixes. To me, it's a sign that the technique isn't fully recommended, and might get phased out. 
+
+This technique has accessibility implications as well. Screen readers will read all of the text in the description, even the text that's hidden. While this behavior might seem favorable, it doesn't work well for partially sighted users, or users with cognitive disabilities. What the screen reader announces to them doesn't match what's on the screen. This experience can cause confusion and frustration. 
+
+So, it's time to take a step back. Maybe truncrating text isn't the right solution at all. 

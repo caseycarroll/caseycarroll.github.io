@@ -26,6 +26,11 @@ url: "https://caseycarroll.github.io/" # the base hostname & protocol for your s
 twitter_username: casey_c_dev
 github_username:  caseycarroll
 
+markdown: kramdown
+kramdown:
+  input: GFM
+highligher: rouge
+
 # Build settings
 theme: 
 plugins:

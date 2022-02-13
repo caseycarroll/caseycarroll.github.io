@@ -285,7 +285,7 @@ ul {
     vertical-align: bottom;
 }
 
-code {
+code.language-plaintext {
     background-color: rgb(211 99 247 / 30%);
     padding: 0.125em;
     border-radius: 3px;
@@ -298,4 +298,8 @@ article img {
 
 article p {
     font-family: Georgia, serif;
+}
+
+pre {
+    padding: 1rem;
 }
