@@ -3,21 +3,21 @@
     <nav>
         <ul class="unstyled-inline-list">
             <li>
-                <a href="/" class="{%if page.link == "home" %}current-page{%endif%}">Home
+                <a id="home" href="/" class="{%if page.link == "home" %}current-page{%endif%}">Home
                     {%if page.link == "home" %}
                         <span class="visually-hidden">current page</span>
                     {%endif%}
                 </a>
             </li>
             <li>
-                <a href="/blog.html" class="{%if page.link == "blog" %}current-page{%endif%}"">Blog
+                <a id="blog" href="/blog.html" class="{%if page.link == "blog" %}current-page{%endif%}"">Blog
                     {%if page.link == "blog" %}
                         <span class="visually-hidden">current page</span>
                     {%endif%}
             </a>
             </li>
             <li>
-                <a href="/photos.html" class="{%if page.link == "photos" %}current-page{%endif%}"">Photos
+                <a id="photos" href="/photos.html" class="{%if page.link == "photos" %}current-page{%endif%}"">Photos
                     {%if page.link == "photos" %}
                         <span class="visually-hidden">current page</span>
                     {%endif%}
