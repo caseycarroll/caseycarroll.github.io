@@ -20,4 +20,5 @@ I had many opportunities to present ideas and learn how to be a mentor. As a you
 ## What I Enjoyed
 I enjoyed the freedom I was afforded to innovate and refactor. Dedicated innovation sprints, hackathon competitions and supportive scrum managers and stake holders were key in my success. Again, when I spoke up about building something new or redoing a large feature, I was heard. I learned countless valuable lessons when I took on these types of efforts. I'm so grateful for those opportunities.
 
+## Where I'm Going
 My final day is February 28th and I start my new role on March 7th. I will work as a Web Performance Engineer for REI. As many of you know, I'm passionate about web performance. I also do a lot of cycling and hiking in my spare time. This new opportunity is the perfect intersection of everything that's important to me right now. The stars aligned and I have to say goodbye, for now.
