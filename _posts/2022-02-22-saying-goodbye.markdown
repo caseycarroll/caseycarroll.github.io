@@ -2,6 +2,7 @@
 layout: post
 title:  "Saying Goodbye to USAA, For Now"
 date:   2022-02-22 08:03:12 -0800
+hero-img: /assets/images/compressed/DSCF0486.webp
 ---
 After almost five formative years, I'm stepping down from my position as a front-end developer at USAA. As I leave, I want to highlight what I did, learned and enjoyed during my time here.
 
