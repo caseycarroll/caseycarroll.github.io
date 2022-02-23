@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Did Web Development Lose The Right Direction?"
-date:   2022-02-22 08:03:12 -0800
+date:   2022-02-22 17:03:12 -0800
 ---
 
 
