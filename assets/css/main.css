@@ -168,15 +168,16 @@ main {
 }
 
 .avatar-wrapper {
-    text-align: center;
-    margin: auto 0;
     flex-grow: 1;
 }
 
 .avatar {
-    text-align: center;
+    margin: 0 auto;
+    display: block;
     border-radius: 50%;
     width: 8rem;
+    background-color: var(--transparent-primary-color);
+    aspect-ratio: 1 / 1;
     box-shadow: -12px -6px 32px var(--transparent-primary-color), 12px 6px 32px var(--transparent-secondary-color);
 }
 
@@ -312,7 +313,7 @@ pre {
 .hero-img {
     box-shadow: none;
     border-radius: 8px;
-    aspect-ratio: 9 / 6;
+    aspect-ratio: 3 / 2;
     background-color: var(--transparent-primary-color);
 }
 
