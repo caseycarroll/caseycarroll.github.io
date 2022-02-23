@@ -9,8 +9,10 @@ layout: default
             <span class="subheader">{{page.date | date_to_string }}</span>
         </h1>
     </div>
+    {% if page.hero-img %}
     <div>
         <img class="hero-img" src="{{page.hero-img}}" />
     </div>
+    {% endif %}
     {{content}}
 </article>
