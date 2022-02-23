@@ -5,7 +5,7 @@ date:   2022-02-22 17:03:12 -0800
 ---
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y0nVPmN_rhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe style="aspect-ratio:16 / 9; width: 100%;" src="https://www.youtube.com/embed/y0nVPmN_rhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Stefan Judis gave a talk about the state of web development today. He began with an overview of the old tech stack: The classic MySQL, Apache and PHP combo. As time went on, more and more javascript frameworks came onto the scene, build tools, too. This added complexity, especially for beginner web developers. With these newer tools, developers could build rich experiences. Unfortunately, this direction has led to some drawbacks. 
 
