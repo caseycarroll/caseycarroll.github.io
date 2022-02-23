@@ -163,7 +163,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-basis: 27rem;
+    flex-basis: 26rem;
+    flex-grow: 1;
 }
 
 .avatar-wrapper {
