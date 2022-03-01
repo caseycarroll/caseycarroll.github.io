@@ -197,11 +197,13 @@ main {
 }
 
 .about-links > li {
+    --text-color: #1c1c1ccc;
     display: flex;
     background: var(--primary-lighter-color);
     border-radius: 5px;
     padding: 0.5em 0.75em;
     align-items: center;
+    color: var(--text-color);
 }
 
 .about-links > li:hover {
