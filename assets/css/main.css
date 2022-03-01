@@ -1,6 +1,6 @@
 :root {
     --text-color: #222;
-    --text-color-light: #7a7878;
+    --text-color-light: #515050;
     --space-sm: 0.75rem;
     --space-md: 1.5rem;
     --space-lg: 8rem;
@@ -42,7 +42,7 @@ body > header, main, .footer-container {
 }
 
 h1 {
-    font-size: var(--space-md);
+    font-size: 1.25em;
 }
 
 h2 {
@@ -87,6 +87,10 @@ nav a.current-page::after {
 
 main {
     line-height: 1.5;
+}
+
+.secondary-text {
+    color: var(--text-color-light);
 }
 
 .reading-width {
@@ -215,6 +219,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    aspect-ratio: 16 / 9;
 }
 
 .video-container {
