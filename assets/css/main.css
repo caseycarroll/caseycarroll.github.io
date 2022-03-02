@@ -6,9 +6,11 @@
     --space-lg: 3rem;
     --space-xl: 6rem;
     --primary-color: rgb(0, 128, 128);
+    --primary-color-text-safe: rgb(0 121 121);
     --primary-lighter-color: rgb(216, 215, 215);
     --primary-lighter-color-hover: rgb(194, 192, 192);
     --secondary-color: rgb(211, 99, 247);
+    --secondary-color-text-safe: rgb(155 73 181);
     --transparent-primary-color: rgb(0, 128, 128, 0.5);
     --transparent-secondary-color: rgb(211, 99, 247, 0.5);
     color: var(--text-color);
@@ -285,6 +287,13 @@ ul {
     list-style-type: disc;
     font-weight: bold;
     font-size: 1.125em;
+}
+.blog-list a {
+    color: var(--primary-color-text-safe);
+}
+
+.blog-list a:visited {
+    color: var(--secondary-color-text-safe)
 }
 
 @supports (list-style-type: blogs) {
