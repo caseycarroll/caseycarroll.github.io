@@ -11,7 +11,7 @@ source "https://rubygems.org"
 gem "github-pages", "~> 223", group: :jekyll_plugins
 gem "rouge"
 gem "kramdown"
-gem "commonmarker", ">= 0.23.4"
+gem "commonmarker"
 # webrick no longer bundled in Ruby 3.0
 gem "webrick"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
