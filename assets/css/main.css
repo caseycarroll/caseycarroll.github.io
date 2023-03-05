@@ -47,6 +47,13 @@ body {
     border-top-style: solid;
     background-color: #f0f0f0;
     padding-block-start: 3rem;
+    padding-inline: var(--space-md);
+    display: grid;
+    grid-template-columns: 1fr min(80ch, 100%) 1fr;
+}
+
+body > * {
+    grid-column: 2;
 }
 
 h1 {
@@ -95,12 +102,6 @@ main {
     color: var(--text-color-light);
 }
 
-.reading-width {
-    max-width: 45rem;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-}
-
 
 [class*=cluster] {
     display: flex;
@@ -140,13 +141,6 @@ main {
     margin-block-start: var(--space-md);
 }
 
-.hero-wrapper {
-    width: 100%;
-    padding-block-start: clamp(4rem, 10vw, 5rem);
-    padding-block-end: clamp(4rem, 10vw, 5rem);
-    --s1: 3rem;
-}
-
 .waving-hand {
     animation-name: wave;
     animation-duration: 2.5s;
@@ -178,7 +172,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-basis: 26rem;
+    flex-basis: 45ch;
     flex-grow: 1;
 }
 
@@ -218,13 +212,6 @@ main {
 .about-links a {
     text-decoration: none;
     font-weight: bold;
-}
-
-.disclaimer {
-    background-color: khaki;
-    padding: 1rem;
-    border-radius: 5px;
-    margin-bottom: var(--space-md);
 }
 
 
