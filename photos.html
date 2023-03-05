@@ -13,8 +13,11 @@ link: photos
         {% for myimage in image_files %}
             {% if myimage.extname == ".webp" and myimage.path contains "compressed" %}
             <li class="grid-item--{% increment image_counter %}">
-                    <img class="grid-image" src="{{myimage.path}}" loading="lazy"/>
-                   <!-- <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05466_kwlv0n.jpg" alt="A Toyota Previa covered in graffiti" loading="lazy"> -->
+                    <img class="grid-image" src="{{myimage.path}}" 
+                    {% if forloop.index > 3 %}
+                        loading="lazy"
+                    {% endif %}
+                    />
             </li>
             {% endif %}
         {% endfor %}
