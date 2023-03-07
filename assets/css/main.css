@@ -204,6 +204,20 @@ main {
     color: var(--text-color);
 }
 
+.link-card {
+    position: relative;
+}
+
+.link-card a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
 .about-links > li:hover {
     background: var(--primary-lighter-color-hover);
     text-decoration: underline;
