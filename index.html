@@ -3,58 +3,35 @@ layout: home
 title: Casey Carroll
 link: home
 ---
-<div class="cluster--lg ">
-    <div class="avatar-wrapper">
-        <picture>
-            <source srcset="/assets/images/profile.webp">
-            <img class="avatar" src="/assets/images/profile.jpg" alt="Casey at Mt. Saint Helens">
-        </picture>
-    </div>
-    <div class="about-wrapper stack-sm flow">
-        <h1><span aria-hidden="true" class="waving-hand">👋</span>Hey, I'm Casey</h1>
-        <p class="secondary-text">
-            I'm a front-end web developer living in Portland, OR. I spend my free time cycling, listening to music and hanging out with my cat, Monad.
-        </p>
-        <div>
-            <ul role="list">
-                <li class="cluster link-card">
-                    {% include github_icon.html %}
-                    <a href="https://github.com/caseycarroll">Github</a>
-                    <span class="visually-hidden">external link</span>
-                </li>
-                <li class="cluster link-card">
-                    {% include linkedin_icon.html %}
-                    <a href="https://www.linkedin.com/in/casey-carroll-dev/">LinkedIn</a>
-                    <span class="visually-hidden">external link</span>
-                </li>
-                <li class="cluster link-card">
-                    {% include instagram_icon.html %}
-                    <a href="https://www.instagram.com/ccpzza/">Instagram</a>
-                    <span class="visually-hidden">external link</span>
-                </li>
-                <li class="cluster link-card">
-                    {% include twitter_icon.html %}
-                    <a href="https://twitter.com/casey_c_dev">Twitter</a>
-                    <span class="visually-hidden">external link</span>
-                </li>
-            </ul>
-        </div>
-    </div>
+<div class="avatar-wrapper cover">
+    <picture>
+        <source srcset="/assets/images/profile_thumbnail.webp">
+        <img class="avatar" src="/assets/images/profile_thumbnail.webp" alt="Casey at Mt. Saint Helens">
+    </picture>
 </div>
-<div class="video-section switcher flow">
-    <div class="stack-sm video-desc flow">
-        <h2>Cycling the PNW</h2>
-        <p class="secondary-text">In the Summer of 2020 I moved to Portland, OR with the intent to ride my bike as much as possible.
-            There's no shortage of beautiful places to ride here. From the coast to The Dalles, I've descended through amazing landscapes 
-            and crested punishing climbs. 
-        </p>
-    </div>
-    <div class="video-wrapper">
-        <div class="video-container">
-            <video muted controls playsinline>
-                <source src="/assets/videos/bike_clips.mp4#t=0.001" type="video/mp4">
-            </video>
-
-        </div>
-    </div>
-</div>
+    <h1><span aria-hidden="true" class="waving-hand">👋</span>Hey, I'm Casey</h1>
+    <p>
+        I'm a front-end web developer living in Portland, OR. I spend my free time cycling, listening to music and hanging out with my cat, Monad.
+    </p>
+    <ul role="list" class="cluster link-pills unstyled-list">
+        <li>
+            {% include github_icon.html %}
+            <a href="https://github.com/caseycarroll">Github</a>
+            <span class="visually-hidden">external link</span>
+        </li>
+        <li>
+            {% include linkedin_icon.html %}
+            <a href="https://www.linkedin.com/in/casey-carroll-dev/">LinkedIn</a>
+            <span class="visually-hidden">external link</span>
+        </li>
+        <li>
+            {% include instagram_icon.html %}
+            <a href="https://www.instagram.com/ccpzza/">Instagram</a>
+            <span class="visually-hidden">external link</span>
+        </li>
+        <li>
+            {% include twitter_icon.html %}
+            <a href="https://twitter.com/casey_c_dev">Twitter</a>
+            <span class="visually-hidden">external link</span>
+        </li>
+    </ul>

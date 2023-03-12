@@ -3,13 +3,11 @@ layout: default
 title: Casey's Blog
 link: blog
 ---
-<div class="stack ">
-    <h1>Latest Posts</h1>
-    <ul role="list">
-        {% for post in site.posts %}
-          <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-</div>
+<h1>Latest Posts</h1>
+<ul role="list" class="blog-list flow">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>

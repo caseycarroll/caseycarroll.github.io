@@ -1,18 +1,29 @@
 ---
 layout: default
 ---
+<style>
+    .hero-img {
+        border-radius: 8px;
+    }
+    article *:not(h1, h2, .subheader) {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
 
-<article class=" stack">
-    <div>
-        <h1>
-            {{page.title}}
-            <span class="subheader">{{page.date | date_to_string }}</span>
-        </h1>
-    </div>
+    blockquote {
+        font-style: italic;
+        font-size: var(--step-font--1);
+    }
+    a#blog {
+        text-decoration-color: var(--color-secondary);
+    }
+</style>
+<article class="flow">
+    <h1>
+        {{page.title}}
+        <span class="subheader">{{page.date | date_to_string }}</span>
+    </h1>
     {% if page.hero-img %}
-    <div>
-        <img class="hero-img" src="{{page.hero-img}}" />
-    </div>
+    <img class="hero-img" src="{{page.hero-img}}" />
     {% endif %}
     {{content}}
 </article>

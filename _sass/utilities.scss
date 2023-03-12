@@ -32,3 +32,9 @@
         transform: rotate(0deg);
     }
 }
+
+@media (prefers-reduced-motion) {
+    .waving-hand {
+        animation-name: unset;
+    }
+}

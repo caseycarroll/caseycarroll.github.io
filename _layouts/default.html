@@ -9,6 +9,9 @@
     {% if page.layout == "post" %}
         <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
     {% endif %}
+    {% if page.link == "blog" %}
+        <link rel="stylesheet" type="text/css" href="/assets/css/blog.css">
+    {% endif %}
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
         <text y=%22.9em%22 font-size=%2290%22>
         🚵‍♂️
@@ -17,7 +20,7 @@
 </head>
 <body>
     {%- include header.html -%}
-    <main>
+    <main class="flow">
         {{content}}
     </main>
     {%- include footer.html -%}
