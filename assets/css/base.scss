@@ -68,7 +68,7 @@ ol {
     --flow-space: 2em;
 }
 
-:is(h1, h2, h3) + *:not(img, iframe) {
+:is(h1, h2, h3) + *:not(img, iframe, ul) {
     --flow-space: 0.5em;
 }
 
