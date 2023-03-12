@@ -25,6 +25,9 @@
 }
 
 body {
+    border-top-color: var(--color-primary);
+    border-width: 10px;
+    border-top-style: solid;
     background: var(--color-light);
     color: var(--color-dark);
     padding-inline: 2em;
@@ -70,6 +73,10 @@ ol {
 
 :is(h1, h2, h3) + *:not(img, iframe, ul) {
     --flow-space: 0.5em;
+}
+
+header {
+    font-size: var(--step-font-1);
 }
 
 header, footer {
@@ -149,4 +156,5 @@ a {
     display: block;
     font-size: var(--step-font--1);
     font-weight: normal;
+    margin-block-start: 0.75em;
 }
