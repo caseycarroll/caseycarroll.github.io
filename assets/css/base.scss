@@ -1,0 +1,77 @@
+--- 
+--- 
+@import "reset";
+@import "utilities";
+
+:root {
+    --color-dark: #252525;
+    --color-light: #efefef;
+    --color-primary: rgb(0, 128, 128);
+    --step-font-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+    --step-font-1: clamp(1.27rem, calc(1.21rem + 0.25vw), 1.41rem);
+    --step-font-2: clamp(1.42rem, calc(1.36rem + 0.28vw), 1.58rem);
+    --step-font-3: clamp(1.60rem, calc(1.53rem + 0.32vw), 1.78rem);
+    --step-font-4: clamp(1.80rem, calc(1.72rem + 0.36vw), 2.00rem);
+    --step-font-5: clamp(2.03rem, calc(1.94rem + 0.40vw), 2.25rem);
+}
+
+body {
+    background: var(--color-light);
+    color: var(--color-dark);
+    padding: 2em;
+    font-family: system-ui;
+    font-size: var(--step-font-0);
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.1;
+    --color-dark: #464343;
+    color: var(--color-dark);
+}
+
+h1 {
+    max-width: 20ch;
+    font-size: var(--step-font-4);
+}
+
+h2 {
+    max-width: 25ch;
+    font-size: var(--step-font-3);
+}
+
+h3 {
+    font-size: var(--step-font-2);
+}
+
+ul,
+ol {
+    padding-inline-start: 1em;
+}
+
+.flow > * + * {
+    margin-block-start: var(--flow-space, 1em);
+}
+
+:is(h1, h2, h3) {
+    --flow-space: 1.5em;
+}
+
+:is(h1, h2, h3) + * {
+    --flow-space: 0.5em;
+}
+
+main {
+    max-width: 55ch;
+    margin-inline: auto;
+}
+
+a {
+    color: currentColor;
+    text-decoration-color: var(--color-primary);
+    text-decoration-thickness: 0.3ex;
+    text-underline-offset: 0.3ex;
+  }

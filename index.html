@@ -1,7 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
 title: Casey Carroll
 link: home
@@ -13,13 +10,13 @@ link: home
             <img class="avatar" src="/assets/images/profile.jpg" alt="Casey at Mt. Saint Helens">
         </picture>
     </div>
-    <div class="about-wrapper stack-sm">
+    <div class="about-wrapper stack-sm flow">
         <h1><span aria-hidden="true" class="waving-hand">👋</span>Hey, I'm Casey</h1>
         <p class="secondary-text">
             I'm a front-end web developer living in Portland, OR. I spend my free time cycling, listening to music and hanging out with my cat, Monad.
         </p>
         <div>
-            <ul class="unstyled-inline-list cluster about-links stack-exception">
+            <ul role="list">
                 <li class="cluster link-card">
                     {% include github_icon.html %}
                     <a href="https://github.com/caseycarroll">Github</a>
@@ -44,8 +41,8 @@ link: home
         </div>
     </div>
 </div>
-<div class="video-section switcher ">
-    <div class="stack-sm video-desc">
+<div class="video-section switcher flow">
+    <div class="stack-sm video-desc flow">
         <h2>Cycling the PNW</h2>
         <p class="secondary-text">In the Summer of 2020 I moved to Portland, OR with the intent to ride my bike as much as possible.
             There's no shortage of beautiful places to ride here. From the coast to The Dalles, I've descended through amazing landscapes 
