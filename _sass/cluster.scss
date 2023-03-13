@@ -1,0 +1,10 @@
+[class*="cluster"] {
+    --space: 0.8em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space, 1em);
+}
+
+.cluster-l {
+    --space: 2em;
+}

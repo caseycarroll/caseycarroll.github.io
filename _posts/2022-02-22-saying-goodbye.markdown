@@ -4,9 +4,9 @@ title:  "Saying Goodbye to USAA, For Now"
 date:   2022-02-22 08:03:12 -0800
 hero-img: /assets/images/compressed/DSCF0486.webp
 ---
-After almost five formative years, I'm moving on from my position as a front-end developer at USAA. As I leave, I want to highlight what I did, learned and enjoyed during my time here.
+After almost five formative years, I'm moving on from my position as a front-end developer at USAA. As I leave, I want to highlight what I did, learned and enjoyed during my time there.
 
-> Member Home is the internal name for the account dashboard web application at USAA.
+> **Member Home** is the internal name for the account dashboard web application at USAA.
 
 ## What I Did
 USAA gave me opportunities to build robust web applications. I'm most proud of the work my team and I put into Member Home. It's not often you get the opportunity to build a highly trafficked web experience, especially out of college. There was so much on the line: the information Member Home displays is extremely important to people. We also built interactive experiences for product acquisition flows and rich customization features, like drag and drop with groups and subgroups. 

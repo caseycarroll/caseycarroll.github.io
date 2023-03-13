@@ -1,0 +1,11 @@
+@counter-style blogs {
+    system: cyclic;
+    symbols: 🗒️;
+    suffix: " ";
+}
+
+@supports (list-style-type: blogs) {
+    ul.blog-list {
+        list-style-type: blogs;
+    }
+}
