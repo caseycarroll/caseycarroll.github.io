@@ -9,6 +9,7 @@
 :root {
     --color-dark: #252525;
     --color-dark-lighter: #464343;
+    --color-dark-lightest: #bbb;
     --color-light: #f3f3f3;
     --color-primary: rgb(0, 128, 128);
     --color-secondary: rgb(211, 99, 247);
@@ -88,7 +89,7 @@ header .current-page {
 }
 
 footer {
-    border-top: 0.025em solid var(--color-dark-lighter);
+    border-top: 0.025em solid var(--color-dark-lightest);
     margin-block-start: 20vh;
 }
 
@@ -114,7 +115,7 @@ a {
 
 .link-pills > li {
     font-size: var(--step-font--1);
-    border: .025em solid var(--color-dark-lighter);
+    border: .025em solid var(--color-dark-lightest);
     border-radius: 5px;
     padding-block: 0.5em;
     padding-inline: 0.75em;
