@@ -135,7 +135,7 @@ a {
 .avatar {
     border-radius: 50%;
     width: 120px;
-    height: auto;
+    aspect-ratio: 1 / 1;
     background-color: var(--transparent-primary-color);
     box-shadow: -12px -6px 32px var(--transparent-primary-color), 12px 6px 32px var(--transparent-secondary-color);
 }
