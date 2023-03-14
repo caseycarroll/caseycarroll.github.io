@@ -146,6 +146,7 @@ a {
     aspect-ratio: 1 / 1;
     background-color: var(--transparent-primary-color);
     box-shadow: -12px -6px 32px var(--transparent-primary-color), 12px 6px 32px var(--transparent-secondary-color);
+    border: var(--color-light) solid 1px;
 }
 
 .video-wrapper {
