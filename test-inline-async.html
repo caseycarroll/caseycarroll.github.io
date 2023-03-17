@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -465,5 +467,10 @@ footer p {
 <body>
     <h1>inline styles + render blocking stylesheet</h1>
     <img src="http://placekitten.com/1000/1000" alt="cat pic">
+    {% for i in (1..500) %}
+        <div>
+            <p>test element</p>
+        </div>
+    {% endfor %}
 </body>
 </html>
