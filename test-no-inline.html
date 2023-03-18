@@ -11,14 +11,6 @@
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
-    <h1>no inline</h1>
-    <img src="http://placekitten.com/1000/1000" alt="cat pic">
-    <img src="http://placekitten.com/900/900" alt="cat pic">
-    <img src="http://placekitten.com/750/750" alt="cat pic">
-    {% for i in (1..500) %}
-        <div>
-            <p>test element</p>
-        </div>
-    {% endfor %}
+    {% include dummy_large.html %}
 </body>
 </html>
