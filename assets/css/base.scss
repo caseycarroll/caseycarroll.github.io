@@ -46,7 +46,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-weight: 700;
     line-height: 1.1;
     text-wrap: balance;
@@ -63,9 +64,13 @@ h2 {
 }
 
 h3 {
+    max-width: 28ch;
     font-size: var(--step-font-2);
 }
 
+h4 {
+    font-size: var(--step-font-1);
+}
 ul,
 ol {
     padding-inline-start: var(--space-s);
@@ -75,11 +80,11 @@ ol {
     margin-block-start: var(--flow-space, 1em);
 }
 
-:is(h1, h2, h3, img, iframe) {
+:is(h1, h2, h3, h4, img, iframe) {
     --flow-space: var(--space-xl);
 }
 
-:is(h1, h2, h3) + *:not(img, iframe, ul) {
+:is(h1, h2, h3, h4) + *:not(img, iframe, ul) {
     --flow-space: var(--space-xs);
 }
 

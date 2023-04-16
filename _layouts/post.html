@@ -5,7 +5,8 @@ layout: default
     .hero-img {
         border-radius: 8px;
     }
-    article *:not(h1, h2, .subheader) {
+
+    article p {
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
@@ -13,8 +14,40 @@ layout: default
         font-style: italic;
         font-size: var(--step-font--1);
     }
+
     a#blog {
         text-decoration-color: var(--color-secondary);
+    }
+
+    p>code {
+        background-color: var(--transparent-secondary-color);
+        font-size: 0.8em;
+        padding-inline: 0.25em;
+        border-radius: 3px;
+    }
+
+    img {
+        margin-inline: auto;
+        margin-block: var(--space-m);
+    }
+
+    table {
+        border-collapse: collapse;
+        margin: 1em 1em;
+        border: 1px solid #CCC;
+    }
+
+    table thead {
+        background-color: #EEE;
+    }
+
+    table thead td {
+        color: #666;
+    }
+
+    table td {
+        padding: 0.5em 1em;
+        border: 1px solid #CCC;
     }
 </style>
 <article class="flow">
