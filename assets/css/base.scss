@@ -4,7 +4,6 @@
 @import "utilities";
 @import "cluster";
 @import "icon";
-@import "cover";
 
 :root {
     --color-dark: #252525;
@@ -32,6 +31,11 @@
     --space-3xl: clamp(6.75rem, calc(6.49rem + 1.30vw), 7.50rem);
 }
 
+.max-width-container {
+    max-width: 60ch;
+    margin-inline: auto;
+}
+
 body {
     border-top-color: var(--color-primary);
     border-width: 10px;
@@ -42,6 +46,7 @@ body {
     font-family: system-ui;
     font-size: var(--step-font-0);
     line-height: 1.5;
+    overflow-y: scroll; //prevent scrollbar cls on windows
 }
 
 h1,
@@ -94,11 +99,16 @@ header {
 }
 
 header, footer {
-    padding-block: var(--space-l);
+    padding-block: var(--space-xl);
+    padding-block-start: var(--space-l);
 }
 
 header .current-page {
     text-decoration-color: var(--color-secondary);
+}
+
+.section-with-divider {
+    border-bottom: 1px solid var(--color-dark-lightest);
 }
 
 footer {
@@ -108,11 +118,6 @@ footer {
 
 footer .sub-text {
     font-size: var(--step-font--1);
-}
-
-main {
-    max-width: 60ch;
-    margin-inline: auto;
 }
 
 a {
@@ -145,12 +150,18 @@ a {
     left: 0;
 }
 
+.cover {
+    --shadow-offset: 12px;
+    position: relative;
+    left: var(--shadow-offset);
+}
+
 .avatar {
     border-radius: 50%;
     width: 120px;
     aspect-ratio: 1 / 1;
     background-color: var(--transparent-primary-color);
-    box-shadow: -12px -6px 32px var(--transparent-primary-color), 12px 6px 32px var(--transparent-secondary-color);
+    box-shadow: calc(var(--shadow-offset) * -1) -6px 32px var(--transparent-primary-color), var(--shadow-offset) 6px 32px var(--transparent-secondary-color);
     border: var(--color-light) solid 1px;
 }
 

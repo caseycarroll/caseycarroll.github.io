@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,10 @@
     <title>{{page.title}}</title>
     <link rel="stylesheet" type="text/css" href="/assets/css/base.css">
     {% if page.layout == "post" %}
-        <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css">
     {% endif %}
     {% if page.link == "blog" %}
-        <link rel="stylesheet" type="text/css" href="/assets/css/blog.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/blog.css">
     {% endif %}
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
         <text y=%22.9em%22 font-size=%2290%22>
@@ -18,11 +19,15 @@
         </text>
       </svg>">
 </head>
+
 <body>
-    {%- include header.html -%}
-    <main class="flow">
-        {{content}}
-    </main>
-    {%- include footer.html -%}
+    <div class="max-width-container">
+        {%- include header.html -%}
+        <main class="flow">
+            {{content}}
+        </main>
+        {%- include footer.html -%}
+    </div>
 </body>
+
 </html>
