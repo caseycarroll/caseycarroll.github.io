@@ -116,15 +116,22 @@ nav li {
     border-radius: 1000vw;
 }
 
-nav li:hover {
-    background-color: var(--color-primary-transparent);
-    transition: background-color 200ms cubic-bezier(0, 0, .1, 1);
+nav li a {
+    -webkit-tap-highlight-color: transparent;
 }
 
-nav li:has(a:active) {
-    box-shadow: inset 2px 2px 4px var(--color-primary-transparent);
-    transition: box-shadow 200ms cubic-bezier(0, 0, .1, 1);
+@media (hover: hover) {
+    nav li:hover {
+        background-color: var(--color-primary-transparent);
+        transition: background-color 200ms cubic-bezier(0, 0, .1, 1);
+    }
+    nav li:has(a:active) {
+        box-shadow: inset 2px 2px 4px var(--color-primary-transparent);
+        transition: box-shadow 200ms cubic-bezier(0, 0, .1, 1);
+    }
 }
+
+
 
 header, footer {
     padding-block: var(--space-xl);
@@ -188,10 +195,13 @@ a:hover {
     left: 0;
 }
 
-li:hover .link-pill {
-    transform: scale(1.03) translate(-3px, -3px);
-    box-shadow: var(--shadow-elevation-medium);
+@media (hover: hover) {
+    li:hover .link-pill {
+        transform: scale(1.03) translate(-3px, -3px);
+        box-shadow: var(--shadow-elevation-medium);
+    }
 }
+
 
 .cover {
     --shadow-offset: 12px;
