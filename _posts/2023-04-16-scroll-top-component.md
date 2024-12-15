@@ -5,9 +5,7 @@ date:   2023-04-16 08:00:00 -0800
 ---
 *Spoiler: It's zero lines long*
 
-You're reading some long-form content and get three quarters of the way down the page and think... "Screw this. I'm done reading. I want to go back to the top of the page. But how? You're telling me I have to scroll all the way back? Where's a friendly little button that reads "top" when you need one?!"
-
-Now imagine you're a software developer. Your product manager tells you people are desperately reaching for a scroll to top button, but to no avail. We need to swoop in and save the day with a component that scrolls to the top of the page. You're a seasoned developer, so you know web performance is key. Your component should be lightweight and not dramatically increase your JS bundle sizes. Time to brew a cup of coffee, turn on noise cancellation and get to work. 
+Scroll to top features are ubiquitous across the web. They're intended to help users jump back to the top of the page. In theory, this could make your site easier to browse. Most of these features are implemented with JavaScript. This post shows you one way to implement it in JavaScript, as well as alternative approaches. 
 
 ## Defining Requirements for a Scroll to Top Component
 - Component displays when user scrolls defined distance down the page
@@ -127,7 +125,7 @@ function handleClick() {
 If we spin up `rollup-plugin-bundle-analyzer` we'll see we've written about 1.5kb of JavaScript. In the grand scheme of things, that's not much of an issue. However, we know poor performing sites are usually a result of many incremental additions of JS over time. Let's try to get ahead of it and cut some JS stuff out. 
 ![rollup bundle analyzer output](/assets/images/bundle-size.png)
 
-Running code on every scroll event doesn't seem so great either. We could fix this with a debounce or an IntersectionObserver. We're starting to require a lot of engineering for something pretty simple on paper.
+Running code on every scroll event doesn't seem so great either. We could fix this with a debounce or an IntersectionObserver. Regardless of the direction we go next, we're starting to require a lot of engineering for something pretty simple. Let's look for ways to simplify our implementation.
 
 ### Use a link instead of a button
 We can remove the button element and it's click handler in favor of an empty hash link. 
@@ -182,8 +180,8 @@ Do we even need this feature? Let's see if there are scroll to top shortcuts on 
 Wow. We just wasted a lot of time iterating through solutions to a problem that has already been solved. We don't need JavaScript or CSS. We don't need any code at all!
 
 ## What did we learn?
-The greatest rule of engineering is to find the simplest solution. Sometimes the solution is to do nothing at all. In our busy world of JS frameworks and fancy design mockups, it's easy to lose sight of what he browser provides us out of the box.
+One of my guiding principles as an engineer is to favor simpler solutions. In some cases, the solution is to do nothing or pass the responsibility to something else. In our busy world of JS frameworks and fancy design mockups, it's easy to lose sight of what he browser provides us out of the box.
 
-Before building a feature, take a moment to step back and ask if the browser already gives it to you. Don't be afraid to reveal this to your product manager or designers. They may learn something new and change their perspective. This could influence how they come up with features in the future. Ideally you'll end up with less work for everyone.
+Before building a feature, step back and ask if the browser already gives it to you. Don't be afraid to reveal this to your product manager or designers. They may learn something new that changes their perspective. This could influence how they come up with features in the future. Ideally you'll end up with less work for everyone.
 
 Leverage the browser and do less!
