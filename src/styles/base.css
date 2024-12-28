@@ -25,18 +25,18 @@
     --space-3xl: clamp(6.75rem, calc(6.49rem + 1.30vw), 7.50rem);
     --shadow-color: 0deg 0% 65%;
     --shadow-elevation-low:
-      0.5px 0.5px 0.8px hsl(var(--shadow-color) / 0.29),
-      0.8px 0.8px 1.3px -1.2px hsl(var(--shadow-color) / 0.29),
-      1.8px 1.8px 2.9px -2.5px hsl(var(--shadow-color) / 0.29);
+        0.5px 0.5px 0.8px hsl(var(--shadow-color) / 0.29),
+        0.8px 0.8px 1.3px -1.2px hsl(var(--shadow-color) / 0.29),
+        1.8px 1.8px 2.9px -2.5px hsl(var(--shadow-color) / 0.29);
     --shadow-elevation-medium:
-      0.5px 0.5px 0.8px hsl(var(--shadow-color) / 0.31),
-      1.5px 1.5px 2.4px -0.8px hsl(var(--shadow-color) / 0.31),
-      3.7px 3.7px 5.9px -1.7px hsl(var(--shadow-color) / 0.31),
-      9px 9px 14.3px -2.5px hsl(var(--shadow-color) / 0.31);
+        0.5px 0.5px 0.8px hsl(var(--shadow-color) / 0.31),
+        1.5px 1.5px 2.4px -0.8px hsl(var(--shadow-color) / 0.31),
+        3.7px 3.7px 5.9px -1.7px hsl(var(--shadow-color) / 0.31),
+        9px 9px 14.3px -2.5px hsl(var(--shadow-color) / 0.31);
 }
 
 .max-width-container {
-    max-width: 60ch;
+    max-width: 65ch;
     margin-inline: auto;
 }
 
@@ -47,7 +47,7 @@ body {
     background: var(--color-light);
     color: var(--color-dark);
     padding-inline: 2em;
-    font-family: system-ui;
+    font-family: 'Nunito Variable', system-ui;
     font-size: var(--step-font-0);
     line-height: 1.5;
     overflow-y: scroll;
@@ -80,72 +80,26 @@ h3 {
 h4 {
     font-size: var(--step-font-1);
 }
+
 ul,
 ol {
     padding-inline-start: var(--space-s);
 }
 
-.flow > * + * {
+.flow>*+* {
     margin-block-start: var(--flow-space, 1em);
 }
 
-:is(h1, h2, h3, h4, img, iframe) {
+:is(h1, h2, img) {
     --flow-space: var(--space-xl);
 }
 
-:is(h1, h2, h3, h4) + *:not(img, iframe, ul) {
+:is(h3, h4) {
+    --flow-space: var(--space-l);
+}
+
+:is(h1, h2, h3, h4) + *:not(img, ul) {
     --flow-space: var(--space-xs);
-}
-
-header {
-    font-size: var(--step-font-1);
-    font-weight: bold;
-}
-
-nav li {
-    background-color: transparent;
-    padding: 0.3em 0.7em;
-    transition: background-color 300ms cubic-bezier(.90, 0, 1, 1);
-    border-radius: 1000vw;
-}
-
-nav li a {
-    -webkit-tap-highlight-color: transparent;
-}
-
-@media (hover: hover) {
-    nav li:hover {
-        background-color: var(--color-primary-transparent);
-        transition: background-color 200ms cubic-bezier(0, 0, .1, 1);
-    }
-    nav li:has(a:active) {
-        box-shadow: inset 2px 2px 4px var(--color-primary-transparent);
-        transition: box-shadow 200ms cubic-bezier(0, 0, .1, 1);
-    }
-}
-
-
-
-header, footer {
-    padding-block: var(--space-xl);
-    padding-block-start: var(--space-l);
-}
-
-header .current-page {
-    text-decoration-color: var(--color-secondary);
-}
-
-.section-with-divider {
-    border-bottom: 1px solid var(--color-dark-lightest);
-}
-
-footer {
-    border-top: 0.025em solid var(--color-dark-lightest);
-    margin-block-start: 20vh;
-}
-
-footer .sub-text {
-    font-size: var(--step-font--1);
 }
 
 a {
@@ -159,56 +113,15 @@ a:hover {
     text-underline-offset: 0.5ex;
 }
 
-.unstyled-list {
-    padding-inline: 0;
-}
-
-.link-pill {
-    font-size: var(--step-font--1);
-    border: .025em solid var(--color-dark-lightest);
-    border-radius: 5px;
-    padding-block: 0.5em;
-    padding-inline: 0.75em;
-    background-color: var(--color-primary-light);
-    position: relative;
-    box-shadow: var(--shadow-elevation-low);
-    will-change: transform;
-    -webkit-tap-highlight-color: transparent;
-    transition: 
-        transform 200ms cubic-bezier(0, 0, .1, 1),
-        box-shadow 200ms cubic-bezier(0, 0, .1, 1);
-}
-
-.link-pill a::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-@media (hover: hover) {
-    li:hover .link-pill {
-        transform: scale(1.03) translate(-3px, -3px);
-        box-shadow: var(--shadow-elevation-medium);
-    }
-}
-
-
-.cover {
-    --shadow-offset: 12px;
-    position: relative;
-    left: var(--shadow-offset);
-}
-
 .avatar {
+    --shadow-offset: 12px;
     border-radius: 50%;
-    width: 120px;
     aspect-ratio: 1 / 1;
     background-color: var(--transparent-primary-color);
     box-shadow: calc(var(--shadow-offset) * -1) -6px 32px var(--transparent-primary-color), var(--shadow-offset) 6px 32px var(--transparent-secondary-color);
     border: var(--color-light) solid 1px;
+    position: relative;
+    left: var(--shadow-offset);
 }
 
 .video-wrapper {
