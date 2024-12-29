@@ -9,3 +9,8 @@
     white-space: nowrap;
     border-width: 0;
 }
+
+.all-caps {
+    text-transform: uppercase;
+    letter-spacing: 0.15ch;
+}

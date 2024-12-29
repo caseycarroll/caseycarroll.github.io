@@ -39,14 +39,14 @@ try {
         <h2 class="strava-card__heading">
             Cycling Data
         </h2>
-        <p class="strava-card__subtitle">
-            YEAR TO DATE
+        <p class="strava-card__subtitle all-caps">
+            year to date
         </p>
     </div>
 
     <div class="strava-card__data">
-        <p>{ytdDistance} miles</p>
-        <p>{ytdTime} hours</p>
+        <p>{ytdDistance} <span class="all-caps strava-card__unit">miles</span></p>
+        <p>{ytdTime} <span class="all-caps strava-card__unit">hours</span></p>
     </div>
 
     <a class="strava-card__link" href="https://www.strava.com/athletes/6508978"
@@ -115,6 +115,11 @@ try {
         font-size: var(--step-font-2);
         font-weight: bold;
         color: var(--color-dark-lighter);
+    }
+
+    .strava-card__unit {
+        font-weight: 500;
+        font-size: 0.65em;
     }
 
     .strava-card__data > p + p {
