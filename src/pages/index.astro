@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import aviImg from "../assets/avi.jpg";
 import { Image } from "astro:assets";
 import WavingHand from '../components/WavingHand.astro'
+import StravaCard from "../components/StravaCard.astro";
 ---
 
 <Layout>
@@ -57,11 +58,17 @@ import WavingHand from '../components/WavingHand.astro'
 			As a <b>Senior Front-end Web Developer</b>, I built and maintained
 			the customer account dashboard.
 		</p>
+
+		<StravaCard />
 	</main>
 </Layout>
 
-<style>
+<style is:global>
 	main {
 		padding-top: 72px;
+	}
+
+	.strava-card {
+		margin-inline: -24px;
 	}
 </style>
