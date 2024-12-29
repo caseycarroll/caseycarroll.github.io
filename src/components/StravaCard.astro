@@ -1,0 +1,132 @@
+---
+import { Image } from "astro:assets";
+import bikeImg from "../assets/riding.jpg";
+import { undefined } from "astro:schema";
+
+let ytdDistance = "0"
+let ytdTime = "0"
+
+try {
+    const stravaStats = await fetch(
+        "https://www.strava.com/api/v3/athletes/6508978/stats",
+        {
+            headers: {
+                Authorization: import.meta.env.STRAVA_TOKEN,
+            },
+        },
+    ).then((r) => r.json());
+    
+    ytdDistance = Number(stravaStats.ytd_ride_totals.distance /  1609).toLocaleString("en-US", { maximumFractionDigits: 0});
+    ytdTime = Number(stravaStats.ytd_ride_totals.moving_time / 3600).toLocaleString("en-US", { maximumFractionDigits: 0});
+} catch (e) {
+    console.log(e)
+}
+---
+
+<div class="strava-card visual-element">
+    <svg
+        class="strava-card__icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        ><path
+            fill="currentColor"
+            d="m15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"
+        ></path></svg
+    >
+    <div class="strava-card__header flow">
+        <h2 class="strava-card__heading">
+            Cycling Data
+        </h2>
+        <p class="strava-card__subtitle">
+            YEAR TO DATE
+        </p>
+    </div>
+
+    <table class="strava-card__table">
+        <tbody class="text-align-left">
+            <tr>
+                <th>Distance:</th>
+                <td>{ytdDistance} miles</td>
+            </tr>
+            <tr>
+                <th>Time:</th>
+                <td>{ytdTime} hours</td>
+            </tr>
+        </tbody>
+    </table>
+    <a class="strava-card__link" href="https://www.strava.com/athletes/6508978"
+        >Casey's Strava Profile <span aria-hidden="true">↗️</span><span
+            class="sr-only">external link</span
+        ></a
+    >
+    <Image
+        class="strava-card__image"
+        src={bikeImg}
+        alt={"Casey riding a bike in the rain, black and white"}
+        height={300}
+        densities={[1, 2]}
+    />
+</div>
+
+<style>
+    .strava-card {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        --border-radius: 30px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-elevation-medium);
+        background-color: white;
+        display: grid;
+        grid-template-columns: minmax(22ch, 1fr) minmax(24px, auto);
+        grid-template-rows: 1fr repeat(2, auto) 1fr;
+        gap: var(--space-m);
+        padding: var(--space-xs);
+        padding-inline-start: var(--space-m);
+    }
+
+    .strava-card__heading,
+    .strava-card__icon {
+        color: hsl(18 98% 45% / 1);
+    }
+
+    .strava-card__subtitle {
+        font-size: 0.65em;
+        color: var(--color-dark-lighter);
+        font-weight: bold;
+    }
+
+    .strava-card__icon {
+        align-self: center;
+    }
+
+    .strava-card__header,
+    .strava-card__icon,
+    .strava-card__table,
+    .strava-card a {
+        grid-column: 1;
+    }
+
+    .text-align-left {
+        text-align: left;
+    }
+
+    .strava-card__link {
+        display: block;
+        align-self: center;
+    }
+
+    .strava-card__table {
+        font-size: var(--step-font--1);
+        width: 100%;
+    }
+
+    .strava-card__image {
+        object-fit: cover;
+        justify-self: end;
+        border-radius: calc(var(--border-radius) - var(--space-xs));
+        grid-row: 1 / -1;
+        grid-column: 2;
+        height: 100%;
+    }
+</style>

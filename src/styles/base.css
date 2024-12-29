@@ -90,12 +90,16 @@ ol {
     margin-block-start: var(--flow-space, 1em);
 }
 
-:is(h1, h2, img) {
+:is(h1, h2, img, .visual-element) {
     --flow-space: var(--space-xl);
 }
 
 :is(h3, h4) {
     --flow-space: var(--space-l);
+}
+
+:is(a) {
+    --flow-space: var(--space-s);
 }
 
 :is(h1, h2, h3, h4) + *:not(img, ul) {
