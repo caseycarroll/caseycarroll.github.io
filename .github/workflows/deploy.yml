@@ -16,6 +16,8 @@ permissions:
 
 jobs:
   build:
+    env:
+      STRAVA_TOKEN: ${{ secrets.STRAVA_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
