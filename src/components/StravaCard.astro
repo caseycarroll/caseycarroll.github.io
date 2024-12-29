@@ -14,6 +14,7 @@ try {
             },
         },
     ).then((r) => r.json());
+    console.log(import.meta.env.STRAVA_TOKEN)
     
     ytdDistance = Number(stravaStats.ytd_ride_totals.distance /  1609).toLocaleString("en-US", { maximumFractionDigits: 0});
     ytdTime = Number(stravaStats.ytd_ride_totals.moving_time / 3600).toLocaleString("en-US", { maximumFractionDigits: 0});
@@ -43,18 +44,11 @@ try {
         </p>
     </div>
 
-    <table class="strava-card__table">
-        <tbody class="text-align-left">
-            <tr>
-                <th>Distance:</th>
-                <td>{ytdDistance} miles</td>
-            </tr>
-            <tr>
-                <th>Time:</th>
-                <td>{ytdTime} hours</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="strava-card__data">
+        <p>{ytdDistance} miles</p>
+        <p>{ytdTime} hours</p>
+    </div>
+
     <a class="strava-card__link" href="https://www.strava.com/athletes/6508978"
         >Casey's Strava Profile <span aria-hidden="true">↗️</span><span
             class="sr-only">external link</span
@@ -77,10 +71,10 @@ try {
         box-shadow: var(--shadow-elevation-medium);
         background-color: white;
         display: grid;
-        grid-template-columns: minmax(22ch, 1fr) minmax(24px, auto);
+        grid-template-columns: minmax(18ch, 1fr) minmax(24px, auto);
         grid-template-rows: 1fr repeat(2, auto) 1fr;
         gap: var(--space-m);
-        column-gap: 0;
+        column-gap: var(--space-xs);
         padding: var(--space-xs);
         padding-inline-start: var(--space-m);
     }
@@ -114,11 +108,17 @@ try {
     .strava-card__link {
         display: block;
         align-self: center;
+        font-size: var(--step-font--1);
     }
 
-    .strava-card__table {
-        font-size: var(--step-font--1);
-        width: 100%;
+    .strava-card__data {
+        font-size: var(--step-font-2);
+        font-weight: bold;
+        color: var(--color-dark-lighter);
+    }
+
+    .strava-card__data > p + p {
+        margin-block-start: 4px;
     }
 
     .strava-card__image {
