@@ -2,6 +2,22 @@
 import { Image } from "astro:assets";
 import bikeImg from "../assets/riding.jpg";
 
+/**
+ * nvm refresh token will change
+ * need to use a cloudworker 
+ * 1. Store Client ID, Client Secret and Refresh token in .env
+ * 2. Add these secrets to github repo
+ * 3. check if auth token is old
+ * 3. Use secrets to request new authorization token
+ *  ie. curl -X POST https://www.strava.com/oauth/token \
+        -d client_id=143711 \
+        -d client_secret=7b96bcd4f3da99d0dfd8c593aaac5d96dc2395a0 \
+        -d grant_type=refresh_token \
+        -d refresh_token=62cc6a1062c2295a464446d5c21bf65cd058c688
+    4. grab auth token from response: response.access_token
+    5. Make call to strava API
+ */
+
 let ytdDistance = "0"
 let ytdTime = "0"
 

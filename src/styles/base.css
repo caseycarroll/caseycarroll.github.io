@@ -36,7 +36,9 @@
 }
 
 .max-width-container {
-    max-width: 65ch;
+    /* temporary fix for CLS 
+    max-width: 65ch; */
+    max-width: 750px;
     margin-inline: auto;
 }
 
