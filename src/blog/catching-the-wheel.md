@@ -5,8 +5,8 @@ pubDate: 2022-11-26
 tags: ["webperformance"]
 ---
 # Catching the Wheel at REI
-One of my proudest moments as an engineer was when I helped bring to light a severe web performance issue in REI's A/B testing implementation. This effort took an incalcuable amount of team work. It wouldn't have been possible without the immense engineering talent at REI. 
+REI was a special place with immense engineering talent. When I first identified an issue with REI's A/B testing solution, I was nervous. A/B testing is absolutely critical to running an e-commerce site, and it was imperitive to change how we used it. Fortunately I had the support and expertise from REI's engineers to help build my case and offer a better solution. 
 
-Performance improvements are usually measured in miliseconds, not seconds. After addressing the issue, REI saw 50%-60% improvements to Largest Contentful Paint and First Contentful Paint performance metrics. This knocked down a massive wall in REI's web architecture that allowed for many following optimizations.
+After addressing this issue, REI saw 50%-60% improvements to Largest Contentful Paint and First Contentful Paint performance metrics. This was my most significant accomplishment at REI.
 
 [Catching the Wheel 🔗](https://engineering.rei.com/web-performance/catch-the-wheel.html)
