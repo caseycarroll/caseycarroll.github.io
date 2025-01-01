@@ -1,10 +1,11 @@
 ---
-import "../styles/base.css";
 import Layout from "../layouts/Layout.astro";
 import aviImg from "../assets/avi.jpg";
 import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 import WavingHand from "../components/WavingHand.astro";
-import StravaCard from "../components/StravaCard.astro";
+
+const posts = await getCollection('blog')
 ---
 
 <Layout>
@@ -23,46 +24,25 @@ import StravaCard from "../components/StravaCard.astro";
 			</div>
 			<h1><WavingHand /> Hey, I'm Casey</h1>
 			<p>
-				I'm a front-end web developer living in Portland, OR. I spend my
+				I'm a front-end web developer living in <b>Portland, OR</b>. I spend my
 				free time cycling, listening to music and hanging out with my
-				cat, Monad.
+				cat, Monad. I currently build web experiences for the fashion
+				focus category at <a href="www.ebay.com">eBay 🛍️</a>.
+			</p>
+			<p>
+				Previously, I worked on web performance at <a href="www.rei.com">REI 🌲</a>
 			</p>
 		</section>
-
-		<h2>Where I've Worked</h2>
-		<p>
-			I build fast and resilient websites that work for everyone,
-			regardless of their abilities or connection speed.
-		</p>
-		<h3>
-			<a href="www.ebay.com">eBay</a>
-			<span class="subheader">2024-Present</span>
-		</h3>
-		<p>
-			As a <b>Senior Front-end Engineer</b>, I build web experiences
-			within the Fashion focus category at eBay.
-		</p>
-		<h3>
-			<a href="www.rei.com">REI</a>
-			<span class="subheader">2022-Present</span>
-		</h3>
-		<p>
-			As a <b>Senior Web Performance Engineer</b>, I lead initiatives to
-			improve site speed for REI customers.
-		</p>
-		<h3>
-			<a href="www.usaa.com">USAA</a>
-			<span class="subheader">2017-2022</span>
-		</h3>
-		<p>
-			As a <b>Senior Front-end Web Developer</b>, I built and maintained
-			the customer account dashboard.
-		</p>
+		<h2>Blog</h2>
+		<ul class="flow">
+			{
+				posts.map(post => (
+					<li>
+						<a href={`/blog/${post.id}`}>{post.data.title}</a>
+						<p class="subheader">{post.data.description}</p>
+					</li>
+				))
+			}
+		</ul>
 	</main>
 </Layout>
-
-<style is:global>
-	main {
-		padding-top: 72px;
-	}
-</style>
