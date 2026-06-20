@@ -10,6 +10,6 @@
   },
   "dependencies": {
     "@fontsource-variable/nunito": "^5.1.0",
-    "astro": "^5.1.1"
+    "astro": "^6.4.8"
   }
 }
